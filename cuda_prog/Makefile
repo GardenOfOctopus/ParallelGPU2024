@@ -1,9 +1,9 @@
 ARCH = sm_60
-HOST_COMP = mpicc
+HOST_COMP = mpicxx
 CUDA_COMP = nvcc
-TARGET = cuda
+TARGET = 128_mod
 
-SRC = cuda_parallel.cu
+SRC = cuda_parallel_mod.cu
 
 MPI_FLAGS = -O3 -std=c++11
 CUDA_FLAGS = -Xptxas -dlcm=cg -I/opt/ibm/spectrum_mpi/include -L/opt/ibm/spectrum_mpi/lib -lmpiprofilesupport -lmpi_ibm
